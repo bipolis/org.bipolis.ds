@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>org.bipolis.ds</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<parent>
+		<groupId>org.bipolis</groupId>
+		<artifactId>org.bipolis</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../org.bipolis/pom.xml</relativePath>
+	</parent>
+	<description>The The Directory Service - Project</description>
+	<scm>
+		<connection>scm:git:https://github.com/bipolis/org.bipolis.common.git</connection>
+		<developerConnection>scm:git:https://github.com/bipolis/org.bipolis.git</developerConnection>
+		<url>https://github.com/bipolis/org.bipolis.common</url>
+	</scm>
+	<modules>
+		<module>org.bipolis.ds.sandbox</module>
+	</modules>
+</project>
