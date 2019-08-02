@@ -13,18 +13,163 @@
 
 	<description>The Directory Service - Sandbox</description>
 
+	<properties>
+		<ads.version>2.0.0.AM25</ads.version>
+		<ad.version>2.0.0.AM1</ad.version>
+
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.bipolis</groupId>
 			<artifactId>org.bipolis.indexes.osgi-api</artifactId>
 			<type>pom</type>
 		</dependency>
+
+		<dependency>
+			<groupId>org.bipolis</groupId>
+			<artifactId>org.bipolis.indexes.osgi-impl</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.bipolis</groupId>
+			<artifactId>org.bipolis.indexes.bundles-gogo</artifactId>
+			<type>pom</type>
+			<scope>runtime</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.directory.server</groupId>
-			<artifactId>apacheds-test-framework</artifactId>
-			<version>2.0.0.AM25</version>
+			<artifactId>apacheds-core-annotations</artifactId>
+			<version>${ads.version}</version>
 
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.server</groupId>
+			<artifactId>apacheds-core-api</artifactId>
+			<version>${ads.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.server</groupId>
+			<artifactId>apacheds-i18n</artifactId>
+			<version>${ads.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.server</groupId>
+			<artifactId>apacheds-protocol-kerberos</artifactId>
+			<version>${ads.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.server</groupId>
+			<artifactId>apacheds-protocol-ldap</artifactId>
+			<version>${ads.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.server</groupId>
+			<artifactId>apacheds-protocol-shared</artifactId>
+			<version>${ads.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.server</groupId>
+			<artifactId>apacheds-server-annotations</artifactId>
+			<version>${ads.version}</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-ldap-codec-standalone</artifactId>
+			<version>${ad.version}</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-ldap-model</artifactId>
+			<version>${ad.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-ldap-schema-data</artifactId>
+			<version>${ad.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-ldap-extras-aci</artifactId>
+			<version>${ad.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-asn1-api</artifactId>
+			<version>${ad.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-i18n</artifactId>
+			<version>${ad.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-util</artifactId>
+			<version>${ad.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-ldap-codec-core</artifactId>
+			<version>${ad.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-ldap-extras-util</artifactId>
+			<version>${ad.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-util</artifactId>
+			<version>${ad.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-ldap-client-api</artifactId>
+			<version>${ad.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-ldap-extras-trigger</artifactId>
+			<version>${ad.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-ldap-extras-sp</artifactId>
+			<version>${ad.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.directory.api</groupId>
+			<artifactId>api-ldap-net-mina</artifactId>
+			<version>${ad.version}</version>
+		</dependency>
+
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.mina</groupId> -->
+		<!-- <artifactId>mina-core</artifactId> -->
+		<!-- <version>2.1.3</version> -->
+		<!-- </dependency> -->
+
+
 	</dependencies>
 
 	<build>
@@ -38,6 +183,10 @@
 			<plugin>
 				<groupId>biz.aQute.bnd</groupId>
 				<artifactId>bnd-baseline-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>bnd-indexer-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
