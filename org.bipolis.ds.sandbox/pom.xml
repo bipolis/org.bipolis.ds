@@ -15,7 +15,7 @@
 
 	<properties>
 		<ads.version>2.0.0.AM25</ads.version>
-		<ad.version>2.0.0.AM1</ad.version>
+		<ad.version>2.1.0</ad.version>
 
 	</properties>
 	<dependencies>
